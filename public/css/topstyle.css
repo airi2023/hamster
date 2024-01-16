@@ -307,13 +307,13 @@ footer address {
 
 /* 記事フェードイン--------------- */
 .fadeIn {
-    transform: translate3d(0, 50px, 0);
-    transition: 1s;
+    /* transform: translate3d(0, 50px, 0); */
+    transition: 2s;
     opacity: 0;
 }
 
 .fadeIn.animated {
-    transform: translate3d(0, 0, 0);
+    /* transform: translate3d(0, 0, 0); */
     opacity: 1;
 }
 
@@ -452,7 +452,7 @@ section .container .row .section_padding h4 {
 
 .blurBg:after {
     content: '';
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 0px;
     left: -5px;
@@ -491,14 +491,92 @@ section .container .row .section_padding h4 {
 }
 
 
-/* PC表示のみ ------------------------------*/
-@media screen and (min-width: 991px) {
+/* 下層ページ-------------------------------------------------- */
+/* 共通 */
+.subpage .top-wrap {
+    position: relative;
+}
+.subpage .top {
+    background-image: url(/images/money1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom 22%;
+    height: 30vw;
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 5vw;
+    position: relative;
+}
 
+.top:before {
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* .top:after {
+    content: '';
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+} */
+
+.subpage .top-wrap .slider-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    color: #fff;
+    line-height: 2.5;
+    border-bottom: solid 0.3vw #fff;
+}
+
+/* 記事 */
+.subpage .contents{
+    padding-top: 40px;
+}
+
+/* 見積りページ------------------------ */
+.subpage .price p {
+    text-align: center;
+}
+
+/* PC表示のみ ------------------------------*/
+@media screen and (min-width: 1801px) {
     /* ロゴ幅考慮 ナビ位置調整 */
     .navbar-collapse {
         padding-right: 130px;
     }
+}
+@media screen and (max-width: 1800px) {
+    .navbar-collapse {
+        padding-right: 0px;
+    }
+}
+@media screen and (min-width:992px) and ( max-width:1190px)  {
+    .navbar-expand-lg .navbar-nav .nav-item a{
+        padding: 0.5rem 10px;
+    }
+}
 
+@media screen and (min-width: 991px) {
     /* ナビ間の外側余白 */
     .navbar-expand-lg .navbar-nav .nav-item {
         /* margin: 0 10px; */

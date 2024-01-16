@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 検索除け -->
+    <meta name="robots" content="noindex, nofollow">
+
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
     <!-- BootStrap読み込み app.cssはresourceフォルダ内（コンパイル前なので）-->
@@ -48,15 +51,15 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#new">新着情報</a>
+                        <a class="nav-link" href="/#new">新着情報</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#type">ハムスターの種類</a>
+                        <a class="nav-link" href="/#type">ハムスターの種類</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#goods">飼育グッズ</a>
+                        <a class="nav-link" href="/#goods">飼育グッズ</a>
                     </li>
 
                     <li class="nav-item">
@@ -82,7 +85,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link adminbtn" href="#contact">お問合わせ</a>
+                        <a class="nav-link adminbtn" href="#contact">お問い合わせ</a>
                     </li>
 
 
@@ -340,7 +343,7 @@
 
         <section id="contact">
             <div class="container">
-                <h3>お問合わせ</h3>
+                <h3>お問い合わせ</h3>
                 {{-- <img class="d-block w-100" src="/images/1.jpg"> --}}
                 <p class="intro">当店のスタッフはハムスターの専門家ばかり。<br>
                     ハムスターに関する疑問や相談事は何でもお気軽にお聞かせください。<br>
@@ -401,22 +404,22 @@
                         <a class="nav-link" href="/">Top</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#new">新着情報</a>
+                        <a class="nav-link" href="/#new">新着情報</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#type">ハムスターの種類</a>
+                        <a class="nav-link" href="/#type">ハムスターの種類</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#goods">飼育グッズ</a>
+                        <a class="nav-link" href="/#goods">飼育グッズ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#price">飼育費用は？</a>
+                        <a class="nav-link" href="/#price">飼育費用は？</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#access">店舗紹介</a>
+                        <a class="nav-link" href="/#access">店舗紹介</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">お問合わせ</a>
+                        <a class="nav-link" href="/#contact">お問い合わせ</a>
                     </li>
                 </ul>
                 <p>〒000-0000 大阪府大阪市000-00<br>

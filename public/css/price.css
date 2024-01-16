@@ -13,6 +13,11 @@
 #mitsumori-js .mitsumori-js-tbl {
     margin-bottom:15px;
 }
+#mitsumori-js .mitsumori-js-tbl thead {
+    background-color: #FFA07A;
+}
+
+/* 合計 */
 #mitsumori-js .mitsumori-js-total-tbl {
     max-width:480px;
     margin-left:auto;
@@ -51,3 +56,4 @@
 /* @media screen and (max-width:768px) {
 
 } */
+

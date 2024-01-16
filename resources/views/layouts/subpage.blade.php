@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 検索除け -->
+    <meta name="robots" content="noindex, nofollow">
+
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
     <!-- BootStrap読み込み app.cssはresourceフォルダ内（コンパイル前なので）-->
@@ -34,7 +37,7 @@
     <header>
         <!-- ナビ -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="/top">はむはむハウス</a>
+            <a class="navbar-brand" href="/">はむはむハウス</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,41 +52,27 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#new">新着情報</a>
+                        <a class="nav-link" href="/#new">新着情報</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#type">ハムスターの種類</a>
+                        <a class="nav-link" href="/#type">ハムスターの種類</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#goods">飼育グッズ</a>
+                        <a class="nav-link" href="/#goods">飼育グッズ</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/price">飼育費用は？</a>
                     </li>
 
-                    <!-- ドロップダウンタイプ -->
-                    {{-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Reserve
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">予約明細</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li> --}}
-                    <!-- ドロップダウンタイプここまで -->
-
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#access">店舗紹介</a>
+                        <a class="nav-link" href="/#access">店舗紹介</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link adminbtn" href="#contact">お問合わせ</a>
+                        <a class="nav-link adminbtn" href="/#contact">お問い合わせ</a>
                     </li>
 
 
@@ -92,6 +81,14 @@
         </nav>
     </header>
 
+
+    {{-- <img src="{{ asset('images/1.jpg')}}"> --}}
+    <div class="top-wrap">
+        <div class="top"></div>
+        <div class="slider-text">
+            <h2>飼育費用は？</h2>
+        </div>
+    </div>
 
 
     <div class="contents">
@@ -108,22 +105,22 @@
                     <a class="nav-link" href="/">Top</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#new">新着情報</a>
+                    <a class="nav-link" href="/#new">新着情報</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#type">ハムスターの種類</a>
+                    <a class="nav-link" href="/#type">ハムスターの種類</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#goods">飼育グッズ</a>
+                    <a class="nav-link" href="/#goods">飼育グッズ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#price">飼育費用は？</a>
+                    <a class="nav-link" href="/#price">飼育費用は？</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#access">店舗紹介</a>
+                    <a class="nav-link" href="/#access">店舗紹介</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">お問合わせ</a>
+                    <a class="nav-link" href="/#contact">お問い合わせ</a>
                 </li>
             </ul>
             <p>〒000-0000 大阪府大阪市000-00<br>
