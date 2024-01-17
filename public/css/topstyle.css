@@ -416,6 +416,16 @@ section .container .row .section_padding h4 {
     cursor: default;
 }
 
+#new .btn.more{
+    margin: 60px auto 80px;
+    max-width: 200px;
+    padding: 2vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 23px;
+}
+
 /* ハムスターの種類 */
 #type>.container:nth-of-type(1) {
     margin-bottom: 70px;

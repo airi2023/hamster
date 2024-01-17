@@ -215,7 +215,7 @@
                         <a class="btn">1890円(税込)</a>
                     </div> --}}
 
-                    <a class="btn" href="/news" role="button">詳しくはこちら &raquo;</a>
+                    <a class="btn more" href="/news" role="button">More &raquo;</a>
                 </div>
             </div> <!-- /container -->
         </section>

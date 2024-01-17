@@ -14,24 +14,27 @@ class ArticleTableSeeder extends Seeder
      */
     public function run(): void
     {
+        
+        for ($i=1; $i <= 6; $i++) { 
+            $article = new Article();
+            $article->title="記事タイトル".$i;
+            $article->updated_at = date('Y-m-d');
+            $article->subtitle="1890円(税込)";
+            $article->body="生後" . $i % 3 + 2 . "ヶ月。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。";
+            $article->item_img="slide" . $i % 4 + 1 . ".jpg";
+            $article->save();
+        }
 
+        
         $param = [
-            'title' => 'ゴールデン(♀)',
+            'title' => 'ロボロフスキー(♀)',
             'updated_at' => date('Y-m-d'),
             'subtitle' => '1890円(税込)',
-            'body' => '生後3ヶ月の女の子。穏やかで人懐っこい性格です。食べることが大好きで、もりもりごはんを食べます。',
-            'item_img' => 'slide1.jpg'
+            'body' => '生後2ヶ月の女の子。のんびり屋で眠ることが大好きです。手の平の上でもお構いなしにお昼寝します。',
+            'item_img' => 'slide4.jpg'
         ];
         DB::table('articles')->insert($param);
 
-        $param = [
-            'title' => 'ジャンガリアン(♂)',
-            'updated_at' => date('Y-m-d'),
-            'subtitle' => '1890円(税込)',
-            'body' => '生後3ヶ月の男の子。心優しい性格で、ちょっぴりおくびょうな子です。ものかげに隠れて、こっそりこちらを見ている姿が可愛らしいです。',
-            'item_img' => 'slide2.jpg'
-        ];
-        DB::table('articles')->insert($param);
 
         $param = [
             'title' => 'ジャンガリアン(♀)',
@@ -44,23 +47,26 @@ class ArticleTableSeeder extends Seeder
 
 
         $param = [
-            'title' => 'ロボロフスキー(♀)',
+            'title' => 'ジャンガリアン(♂)',
             'updated_at' => date('Y-m-d'),
             'subtitle' => '1890円(税込)',
-            'body' => '生後2ヶ月の女の子。のんびり屋で眠ることが大好きです。手の平の上でもお構いなしにお昼寝します。',
-            'item_img' => 'slide4.jpg'
+            'body' => '生後3ヶ月の男の子。心優しい性格で、ちょっぴりおくびょうな子です。ものかげに隠れて、こっそりこちらを見ている姿が可愛らしいです。',
+            'item_img' => 'slide2.jpg'
         ];
         DB::table('articles')->insert($param);
 
-        
-        for ($i=5; $i <= 10; $i++) { 
-            $article = new Article();
-            $article->title="記事タイトル".$i;
-            $article->updated_at = date('Y-m-d');
-            $article->subtitle="1890円(税込)";
-            $article->body="生後" . $i % 3 + 2 . "ヶ月。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。";
-            $article->item_img="slide" . $i % 4 + 1 . ".jpg";
-            $article->save();
-        }
+
+        $param = [
+            'title' => 'ゴールデン(♀)',
+            'updated_at' => date('Y-m-d'),
+            'subtitle' => '1890円(税込)',
+            'body' => '生後3ヶ月の女の子。穏やかで人懐っこい性格です。食べることが大好きで、もりもりごはんを食べます。',
+            'item_img' => 'slide1.jpg'
+        ];
+        DB::table('articles')->insert($param);
+
+
+
+
     }
 }
