@@ -153,7 +153,24 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+
+                    <div class="col-md-12 article-wrap">
+                        @foreach($articles->take(6) as $article)
+                            <div class="col-md-4">
+                                <div class="card m-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{$article->title}}</h4>
+                                        <h6 class="card-subtitle">{{$article->updated_at}}</h6>
+                                        <div><img src="upload/{{$article->item_img}}" width='100%'></div>
+                                        <h5>{{$article->subtitle}}</h5>
+                                        <p class="card-text">{{$article->body}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    {{-- <div class="col-md-3">
                         <h3>New!</h3>
                         <img class="d-block w-100" src="/images/slide1.jpg">
                         <br>
@@ -196,7 +213,9 @@
                         <p>生後2ヶ月の女の子。のんびり屋で眠ることが大好きです。手の平の上でもお構いなしにお昼寝します。
                         </p>
                         <a class="btn">1890円(税込)</a>
-                    </div>
+                    </div> --}}
+
+                    <a class="btn" href="/news" role="button">詳しくはこちら &raquo;</a>
                 </div>
             </div> <!-- /container -->
         </section>

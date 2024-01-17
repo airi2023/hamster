@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('layouts.topbase');
-});
+// Route::get('/', function () {
+//     return view('layouts.topbase');
+// });
+
+Route::get('/', [BlogController::class, 'newsIndexTop']);
+
+Route::get('/news', [BlogController::class, 'newsIndex']);
 
 Route::get('/price', function () {
     return view('price');

@@ -337,6 +337,17 @@ footer address {
     margin-bottom: 30px;
 }
 
+/* 見出し */
+.contents h5 {
+    background: none;
+    color: #333;
+    border-bottom: solid 3px #FFA07A;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 6px;
+}
+
 /* ボタン共通 */
 .btn {
     color: #fff;
@@ -554,9 +565,25 @@ section .container .row .section_padding h4 {
 }
 
 /* 見積りページ------------------------ */
+.subpage .price-wrap + div.top {
+    background-image: url(/images/money1.jpg);
+}
 .subpage .price p {
     text-align: center;
 }
+
+/* 新着情報ページ------------------------ */
+.subpage .news-wrap + div.top {
+    background-image: url(/images/slide1.jpg);
+}
+.news p {
+    text-align: center;
+}
+.article-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /* PC表示のみ ------------------------------*/
 @media screen and (min-width: 1801px) {

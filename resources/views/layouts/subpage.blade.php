@@ -84,6 +84,7 @@
 
     {{-- <img src="{{ asset('images/1.jpg')}}"> --}}
     <div class="top-wrap">
+        @yield('top-img')
         <div class="top"></div>
         <div class="slider-text">
             <h2>@yield('top-title')</h2>
