@@ -26,7 +26,20 @@
                                 <h6 class="card-subtitle">{{$article->updated_at}}</h6>
                                 <div><img src="upload/{{$article->item_img}}" width='100%'></div>
                                 <h5>{{$article->subtitle}}</h5>
-                                <p class="card-text">{{$article->body}}</p>
+                                {{-- <p class="card-text">{{$article->body}}</p> --}}
+                                <p class="card-text">{!!nl2br(e($article->body))!!}</p>
+
+                                <form method="post" action="./edit" style="display:inline">
+                                @csrf
+                                <input type="hidden" name="edit_id" value="{{ $article->id }}">
+                                <button class="btn btn-sm btn-outline-secondary" type="submit">修正</button>
+                                </form>
+                                
+                                <form method="post" action="./delete" style="display:inline">
+                                @csrf
+                                <input type="hidden" name="delete_id" value="{{ $article->id }}">
+                                <button class="btn btn-sm btn-outline-secondary" type="submit">削除</button>
+                                </form>
                             </div>
                         </div>
                     </div>
