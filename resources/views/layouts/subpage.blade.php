@@ -86,7 +86,7 @@
     <div class="top-wrap">
         <div class="top"></div>
         <div class="slider-text">
-            <h2>飼育費用は？</h2>
+            <h2>@yield('top-title')</h2>
         </div>
     </div>
 

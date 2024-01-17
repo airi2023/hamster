@@ -1,5 +1,6 @@
 @extends('layouts.subpage')
 
+@section('top-title','飼育費用は？')
 
 @section('contents')
     <div class="container price">
