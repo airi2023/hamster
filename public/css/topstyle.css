@@ -36,9 +36,9 @@
 }
 
 /* 管理者ボタンだけ色変更 */
-/* .navbar-expand-lg .navbar-nav .adminbtn {
-    background: #FFA07A;
-} */
+.navbar-expand-lg .navbar-nav .adminbtn {
+    background: #5f3c17;
+}
 
 /* 中央から下線 アニメーション */
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -605,9 +605,19 @@ section .container .row .section_padding h4 {
         padding-right: 0px;
     }
 }
-@media screen and (min-width:992px) and ( max-width:1190px)  {
+@media screen and (min-width:1111px) and ( max-width:1330px)  {
     .navbar-expand-lg .navbar-nav .nav-item a{
         padding: 0.5rem 10px;
+    }
+}
+@media screen and (min-width:992px) and ( max-width:1110px)  {
+    .navbar-expand-lg .navbar-nav .nav-item a{
+        padding: 0.5rem 5px;
+    }
+}
+@media screen and (min-width:992px) and ( max-width:1010px)  {
+    .navbar-expand-lg .navbar-nav .nav-item a{
+        padding: 0.5rem 3px;
     }
 }
 

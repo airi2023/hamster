@@ -79,7 +79,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link adminbtn" href="#contact">お問い合わせ</a>
+                        <a class="nav-link" href="#contact">お問い合わせ</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link adminbtn" href="/admin-top">従業員用</a>
                     </li>
                 </ul>
             </div>

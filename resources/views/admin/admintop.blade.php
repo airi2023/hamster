@@ -24,7 +24,7 @@
                         @endforeach
                     </div>
 
-                    <a class="btn more" href="/blog" role="button">記事一覧へ &raquo;</a>
+                    <a class="btn more" href="/admin-news" role="button">記事一覧へ &raquo;</a>
                 </div>
             </div> <!-- /container -->
         </section>

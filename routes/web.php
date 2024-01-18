@@ -37,12 +37,12 @@ Route::get('/price', function () {
 //トップページ
 Route::get('/admin-top', [BlogController::class, 'indexAdminTop']);
 
-Route::get('/blog', [App\Http\Controllers\BlogController::class,'index'])->name('index');
+Route::get('/admin-news', [App\Http\Controllers\BlogController::class,'index'])->name('index');
 Route::post('/edit', [App\Http\Controllers\BlogController::class,'edit']);
 Route::get('/edit', function () { return redirect('/');});
 Route::post('/delete', [App\Http\Controllers\BlogController::class,'delete']);
 Route::get('/delete', function () { return redirect("/");});
-Route::get('/new', function () { return view('admin.create');});
+Route::get('/new-article', function () { return view('admin.create');});
 Route::post('/create', [App\Http\Controllers\BlogController::class,'create']);
 Route::post('/change', [App\Http\Controllers\BlogController::class,'change']);
 Route::post('/del_data', [App\Http\Controllers\BlogController::class,'del_data']);

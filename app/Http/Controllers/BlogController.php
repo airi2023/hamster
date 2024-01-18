@@ -56,10 +56,12 @@ class BlogController extends Controller
         //dd($request->all());
         $article = new Article();
         $article->title = $request->title;
+        $article->subtitle = $request->subtitle;
         $article->body = $request->body;
+        $article->item_img = $request->item_img;
         $article->save();
 
-        return redirect('/');
+        return redirect('/admin-news');
     }
 
     //変更保存処理
@@ -70,7 +72,7 @@ class BlogController extends Controller
         $article->body = $request->body;
         $article->save();
 
-        return redirect('/');
+        return redirect('/admin-news');
     }
 
     //削除処理
@@ -78,6 +80,6 @@ class BlogController extends Controller
         //dd($request->all());
         Article::destroy($request->delete_id);
 
-        return redirect('/');
+        return redirect('/admin-news');
     }
 }

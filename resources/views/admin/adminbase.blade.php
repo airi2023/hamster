@@ -60,11 +60,11 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog">新着情報管理</a>
+                        <a class="nav-link" href="/admin-news">新着情報管理</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">商品管理</a>
+                        <a class="nav-link" href="/admin-goods">商品管理</a>
                     </li>
 
                     <!-- ドロップダウンタイプ -->
