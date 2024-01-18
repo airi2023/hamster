@@ -397,19 +397,17 @@ section .container .row .section_padding h4 {
     text-align: center;
 }
 
-#new .row .col-md-3 {
-    position: relative;
-    padding-bottom: 40px;
-    margin-bottom: 60px;
+#new .card {
+    border: none;
 }
 
-#new .row .col-md-3 .btn {
+/* #new .row .col-md-3 .btn {
     margin: auto;
     display: block;
     position: absolute;
     bottom: 0;
     left: calc(50% - 70px);
-}
+} */
 
 #new .row .col-md-3 .btn:hover {
     color: #fff;
@@ -419,11 +417,11 @@ section .container .row .section_padding h4 {
 #new .btn.more{
     margin: 60px auto 80px;
     max-width: 200px;
-    padding: 2vw;
+    padding: 1.5vw;
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 23px;
+    font-size: 21px;
 }
 
 /* ハムスターの種類 */

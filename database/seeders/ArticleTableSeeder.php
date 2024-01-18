@@ -50,7 +50,7 @@ class ArticleTableSeeder extends Seeder
             'title' => 'ジャンガリアン(♂)',
             'updated_at' => date('Y-m-d'),
             'subtitle' => '1890円(税込)',
-            'body' => '生後3ヶ月の男の子。心優しい性格で、ちょっぴりおくびょうな子です。ものかげに隠れて、こっそりこちらを見ている姿が可愛らしいです。',
+            'body' => '生後3ヶ月の男の子。心優しい性格で、ちょっぴり臆病。ものかげに隠れてこっそりこちらを見ている姿がキュートです。',
             'item_img' => 'slide2.jpg'
         ];
         DB::table('articles')->insert($param);

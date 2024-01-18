@@ -1,0 +1,45 @@
+/* bootstrapのデフォルトCSS変更 ---------------*/
+.navbar {
+    /* ナビ背景色 */
+    background-color: #5f3c17 !important;
+}
+
+
+/* 管理者用画面 共通---------------*/
+
+/* ナビ下余白調整 */
+.contents {
+    margin: 170px 0 80px;
+}
+
+/* section*/
+section {
+    padding: 0;
+}
+section:nth-of-type(odd) {
+    background-color: #F6E9D7;
+}
+
+/* フッター --------------- */
+footer {
+    height: 0px;
+    padding: 15px 0 30px;
+    background: #5f3c17;
+    bottom: inherit;
+}
+
+footer address {
+    font-size: 12px;
+    background: #5f3c17;
+}
+
+
+
+/* スマホサイズ ------------------------------*/
+@media screen and (max-width:768px) {
+/* ナビ下余白調整 */
+.contents {
+    margin: 130px 0 80px;
+}
+
+}
