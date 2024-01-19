@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('subtitle')->comment('サブタイトル');
             $table->text('body')->comment('本文');
             $table->string('item_img')->comment('画像');
+            // $table->string('img_path')->comment('画像へのリンク先');
             $table->timestamps();
         });
     }

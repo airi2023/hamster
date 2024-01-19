@@ -11,11 +11,12 @@
                 @foreach ($articles as $article)
                     <div class="card mb-2">
                         <div class="card-body">
-                          <h6 class="card-subtitle mt-2 mb-3">【投稿日：{{ $article->updated_at }}】</h6>
+                            <h6 class="card-subtitle mt-2 mb-3">【投稿日：{{ $article->updated_at }}】</h6>
 
                             <h4 class="card-title">{{ $article->title }}</h4>
                             <div class="news-imgwrap">
-                                <img src="upload/{{ $article->item_img }}" width='200px'>
+                                <img src="/upload/{{ $article->item_img }}" width='200px'>
+                                {{-- <img src="{{ asset("storage/$article->item_img") }}" width='200px'> --}}
                                 <h5>{{ $article->subtitle }}</h5>
                             </div>
                             {{-- <p class="card-text">{{$article->body}}</p> --}}

@@ -5,12 +5,12 @@
 }
 
 .navbar-collapse {
-    justify-content: flex-start!important;
+    justify-content: flex-start !important;
     margin-left: 50px;
 }
 
-li.nav-item:last-of-type{
-border-right: none!important;
+li.nav-item:last-of-type {
+    border-right: none !important;
 }
 
 /* 共通------------------------------------------------*/
@@ -23,6 +23,7 @@ border-right: none!important;
 section {
     padding: 0;
 }
+
 section:nth-of-type(odd) {
     background-color: #F6E9D7;
 }
@@ -41,10 +42,11 @@ footer address {
 }
 
 /* 新着情報---------------------------- */
-.news-imgwrap{
+.news-imgwrap {
     text-align: center;
 }
-.news-btnwrap{
+
+.news-btnwrap {
     text-align: right;
 }
 
@@ -58,9 +60,10 @@ footer address {
 
 /* スマホサイズ ------------------------------*/
 @media screen and (max-width:768px) {
-/* ナビ下余白調整 */
-.contents {
-    margin: 130px 0 80px;
-}
+
+    /* ナビ下余白調整 */
+    .contents {
+        margin: 130px 0 80px;
+    }
 
 }

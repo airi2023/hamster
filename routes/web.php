@@ -43,7 +43,10 @@ Route::get('/edit', function () { return redirect('/');});
 Route::post('/delete', [App\Http\Controllers\BlogController::class,'delete']);
 Route::get('/delete', function () { return redirect("/");});
 Route::get('/new-article', function () { return view('admin.create');});
+
 Route::post('/create', [App\Http\Controllers\BlogController::class,'create']);
+// Route::post('/create', [App\Http\Controllers\BlogController::class,'upload']);
+
 Route::post('/change', [App\Http\Controllers\BlogController::class,'change']);
 Route::post('/del_data', [App\Http\Controllers\BlogController::class,'del_data']);
 

@@ -22,6 +22,7 @@ class ArticleTableSeeder extends Seeder
             $article->subtitle="1890円(税込)";
             $article->body="生後" . $i % 3 + 2 . "ヶ月。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。";
             $article->item_img="slide" . $i % 4 + 1 . ".jpg";
+            // $article->img_path="storage/upload/goods1.jpg";
             $article->save();
         }
 
