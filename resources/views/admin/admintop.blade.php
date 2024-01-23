@@ -4,6 +4,7 @@
     <section id="new">
         <div class="container">
             <h3>新着情報　直近の記事</h3>
+            <p>リポジトリ変更後の更新コミットテスト</p>
         </div>
 
         <div class="container">
