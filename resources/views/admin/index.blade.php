@@ -2,7 +2,7 @@
 
 @section('contents')
     <div class="container news">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-12">
                 <h3>新着情報 記事一覧</h3>
             </div>

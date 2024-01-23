@@ -10,6 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+                    <br>
+                    <a href="/admin-top" class="btn" style="background: #5f3c17;color: #fff;width: 170px;padding: 20px;margin: 30px 0 0;display: block;text-align: center;">管理者用画面へ</a>
                 </div>
             </div>
         </div>

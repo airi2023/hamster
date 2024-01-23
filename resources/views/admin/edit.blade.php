@@ -2,7 +2,7 @@
 
 @section('contents')
     <div class="container">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-12">
                 <h3>投稿修正</h3>
             </div>

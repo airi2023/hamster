@@ -10,6 +10,11 @@
     padding: 1.5rem 1.5rem 1.5rem 2.5rem;
 }
 
+/* ロゴ */
+.navbar-brand{
+    font-weight: bold;
+}
+
 /* スマホメニュー文字中央揃え */
 .navbar-collapse {
     text-align: center;
@@ -516,6 +521,10 @@ section .container .row .section_padding h4 {
 #goods .intro {
     text-align: center;
 }
+#goods .row p .btn:hover {
+    color: #fff;
+    cursor: default;
+}
 
 /* 店舗紹介 ------------------------------*/
 #access p {
@@ -695,6 +704,11 @@ section .container .row .section_padding h4 {
     .carousel {
         margin-top: 8vw;
     }
+
+    .slider-text h2 {
+        font-size: 4.5vw;
+    }
+
 
     /* セクション全体 */
     section {

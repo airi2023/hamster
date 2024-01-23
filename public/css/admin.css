@@ -14,6 +14,24 @@ li.nav-item:last-of-type {
 }
 
 /* 共通------------------------------------------------*/
+/* ログイン--------- */
+.login-text {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.login-text p {
+    border-bottom: solid 2px #5F3C17;
+    margin: 0;
+}
+
+.login-text a{
+    font-size: 15px;
+    color: #FFA07A;
+}
+
+
+
 /* ナビ下余白調整 */
 .contents {
     margin: 170px 0 80px;

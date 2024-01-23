@@ -63,9 +63,9 @@
                         <a class="nav-link" href="/admin-news">新着情報管理</a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="/admin-goods">商品管理</a>
-                    </li>
+                    </li> --}}
 
                     <!-- ドロップダウンタイプ -->
                     {{-- <li class="nav-item dropdown">
@@ -88,8 +88,16 @@
 
 
     <div class="contents">
+        <div class="container">
+            <div class="login-text">
+                <p>ログイン中：{{ Auth::user()->name }}さん</p>
+                <a href="/login">ログイン画面へ</a>
+            </div>
+        </div>
+
         <!-- 子bladeを挿入する部分 -->
         @yield('contents')
+
     </div>
 
 
