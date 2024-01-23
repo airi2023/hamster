@@ -50,6 +50,11 @@ footer address {
     text-align: right;
 }
 
+.card img {
+    max-width: 320px;
+    max-height: 210px;
+    object-fit: cover;
+}
 
 /* タブレットサイズ ------------------------------*/
 @media screen and (max-width:991px) {

@@ -4,7 +4,6 @@
     <section id="new">
         <div class="container">
             <h3>新着情報　直近の記事</h3>
-            <p>リポジトリ変更後の更新コミットテスト</p>
         </div>
 
         <div class="container">
@@ -16,8 +15,8 @@
                                 <div class="card-body">
                                     <h4 class="card-title">{{ $article->title }}</h4>
                                     <h6 class="card-subtitle">{{ $article->updated_at }}</h6>
-                                    <div><img src="upload/{{ $article->item_img }}" width='100%'></div>
-                                    <h5>{{ $article->subtitle }}</h5>
+                                    <div><img src="storage/{{ $article->item_img }}" width='100%'></div>
+                                    <h5>{{ $article->price . "円（税込）" }}</h5>
                                     <p class="card-text">{{ $article->body }}</p>
                                 </div>
                             </div>

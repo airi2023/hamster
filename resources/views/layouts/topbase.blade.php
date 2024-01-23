@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/#new">新着情報</a>
+                        <a class="nav-link" href="/news">新着情報</a>
                     </li>
 
                     <li class="nav-item">
@@ -75,11 +75,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#access">店舗紹介</a>
+                        <a class="nav-link" href="/#access">店舗紹介</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">お問い合わせ</a>
+                        <a class="nav-link" href="/#contact">お問い合わせ</a>
                     </li>
                     
                     <li class="nav-item">
@@ -155,8 +155,8 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{ $article->title }}</h4>
                                         <h6 class="card-subtitle">{{ $article->updated_at }}</h6>
-                                        <div><img src="upload/{{ $article->item_img }}" width='100%'></div>
-                                        <h5>{{ $article->subtitle }}</h5>
+                                        <div class="wrap-img"><img src="storage/{{ $article->item_img }}" width='100%'></div>
+                                        <h5>{{ $article->price . "円（税込）" }}</h5>
                                         <p class="card-text">{{ $article->body }}</p>
                                     </div>
                                 </div>

@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/#new">新着情報</a>
+                        <a class="nav-link" href="/news">新着情報</a>
                     </li>
 
                     <li class="nav-item">
@@ -75,11 +75,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#access">店舗紹介</a>
+                        <a class="nav-link" href="/#access">店舗紹介</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link adminbtn" href="#contact">お問い合わせ</a>
+                        <a class="nav-link" href="/#contact">お問い合わせ</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link adminbtn" href="/admin-top">従業員用</a>
                     </li>
                 </ul>
             </div>

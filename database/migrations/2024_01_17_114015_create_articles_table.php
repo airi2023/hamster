@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->text('title')->comment('タイトル');
-            $table->text('subtitle')->comment('サブタイトル');
+            $table->integer('price')->comment('価格');
             $table->text('body')->comment('本文');
             $table->string('item_img')->comment('画像');
             // $table->string('img_path')->comment('画像へのリンク先');

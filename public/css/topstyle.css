@@ -392,13 +392,31 @@ section .container .row .section_padding h4 {
 }
 
 
-/* 新着情報 */
-#new .intro {
+/* 新着情報 -----------------*/
+/* 共通 記事*/
+.intro {
+    text-align: center;
+}
+.card {
+    border: none;
+}
+
+.card-body{
     text-align: center;
 }
 
-#new .card {
-    border: none;
+.card-subtitle{
+    margin-bottom: 10px;
+}
+
+.card-body .wrap-img{
+    text-align: center;
+}
+
+.card img {
+    max-width: 320px;
+    max-height: 210px;
+    object-fit: cover;
 }
 
 /* #new .row .col-md-3 .btn {
@@ -587,17 +605,8 @@ section .container .row .section_padding h4 {
     background-image: url(/images/slide1.jpg);
 }
 
-.news p {
-    text-align: center;
-}
 
-.article-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-/* PC表示のみ ------------------------------*/
+/* ナビ微調整 ------------------------------*/
 @media screen and (min-width: 1801px) {
 
     /* ロゴ幅考慮 ナビ位置調整 */
@@ -612,26 +621,26 @@ section .container .row .section_padding h4 {
     }
 }
 
-@media screen and (min-width:1111px) and (max-width:1330px) {
+@media screen and (min-width:1101px) and (max-width:1330px) {
     .navbar-expand-lg .navbar-nav .nav-item a {
         padding: 0.5rem 10px;
     }
 }
 
-@media screen and (min-width:992px) and (max-width:1110px) {
+@media screen and (min-width:1021px) and (max-width:1100px) {
     .navbar-expand-lg .navbar-nav .nav-item a {
         padding: 0.5rem 5px;
     }
 }
 
-@media screen and (min-width:992px) and (max-width:1010px) {
+@media screen and (min-width:992px) and (max-width:1020px) {
     .navbar-expand-lg .navbar-nav .nav-item a {
         padding: 0.5rem 3px;
     }
 }
 
+/* PC表示のみ ------------------------------*/
 @media screen and (min-width: 991px) {
-
     /* ナビ間の外側余白 */
     .navbar-expand-lg .navbar-nav .nav-item {
         /* margin: 0 10px; */
@@ -643,19 +652,27 @@ section .container .row .section_padding h4 {
         padding: 0 40px;
     }
 
-    /* 記事　レストラン　画像と文章位置 */
-    .restaurant .row {
-        flex-direction: row-reverse;
+    /* 新着情報記事 */
+    .article-wrap {
+        display: flex;
+        flex-wrap: wrap;
     }
+    
 }
 
 /* タブレットサイズ ------------------------------*/
-/* @media screen and (max-width:991px) {
-    .top {
-        background-position: center top 14%;
-        height: 60vw;
+@media screen and (min-width:768px) and (max-width:991px) {
+    /* 新着情報記事 */
+    .article-wrap {
+        display: flex;
+        flex-wrap: wrap;
     }
-} */
+
+    .col-md-4 {
+        width: 50%!important;
+    }
+}
+
 
 /* スマホサイズ ------------------------------*/
 @media screen and (max-width:768px) {
@@ -709,5 +726,4 @@ section .container .row .section_padding h4 {
         font-size: 18px;
         height: 50px;
     }
-
 }
