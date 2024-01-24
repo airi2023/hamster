@@ -52,6 +52,7 @@ Route::post('/create', [App\Http\Controllers\BlogController::class, 'create']);
 // Route::post('/create', [App\Http\Controllers\BlogController::class,'upload']);
 
 Route::post('/change', [App\Http\Controllers\BlogController::class, 'change']);
+
 Route::post('/del_data', [App\Http\Controllers\BlogController::class, 'del_data']);
 
 

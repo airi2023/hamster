@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; //設定に基づいたファイルの読み書きや削除などを行えるようにする。
+use Illuminate\Support\Facades\Validator;
 use App\Models\Article;
+
 
 class BlogController extends Controller
 {
@@ -65,7 +67,7 @@ class BlogController extends Controller
         // バリデーション---------------------------------------------
         $validator = [
             'title' => 'required|string|max:20',
-            // 'price' => 'required|numeric|min:0|max:6',
+            'price' => 'required|numeric|min:0|max:9999',
             'body' => 'required|string|max:100',
             'item_img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
@@ -75,9 +77,9 @@ class BlogController extends Controller
             'title.required' => 'タイトルは必須項目です。',
             'title.max' => 'タイトルは20文字以内で入力してください。',
             'price.required' => '価格は必須項目です。',
-            'price.numeric' => '価格には数値を入力してください。',
-            'price.min' => '価格は0～6字で入力してください。',
-            'price.max' => '価格は0～6字で入力してください。',
+            'price.numeric' => '価格には数値を半角で入力してください。',
+            'price.min' => '価格は0～4字で入力してください。',
+            'price.max' => '価格は0～4字で入力してください。',
             'body.required' => '本文は必須項目です。',
             'body.max' => '本文は100文字以内で入力してください。',
             'item_img.image' => 'アップロードできるのは画像ファイルのみです。',
@@ -116,6 +118,39 @@ class BlogController extends Controller
 // 変更保存処理
 public function change(Request $request)
 {
+            // バリデーション---------------------------------------------
+            $validator = [
+                'title' => 'required|string|max:20',
+                'price' => 'required|numeric|min:0|max:9999',
+                'body' => 'required|string|max:100',
+                'item_img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            ];
+    
+            // エラーの時、任意のテキストを表示
+            $varidator_text = [
+                'title.required' => 'タイトルは必須項目です。',
+                'title.max' => 'タイトルは20文字以内で入力してください。',
+                'price.required' => '価格は必須項目です。',
+                'price.numeric' => '価格には数値を半角で入力してください。',
+                'price.min' => '価格は0～4字で入力してください。',
+                'price.max' => '価格は0～4字で入力してください。',
+                'body.required' => '本文は必須項目です。',
+                'body.max' => '本文は100文字以内で入力してください。',
+                'item_img.image' => 'アップロードできるのは画像ファイルのみです。',
+                'item_img.mimes' => 'サポートされていない画像形式です。jpeg, png, jpg, gif のいずれかをアップロードしてください。',
+                'item_img.max' => 'ファイルサイズは2048KB以内にしてください。',
+            ];
+            $this->validate($request, $validator, $varidator_text);
+
+            // try {
+            //     $this->validate($request, $validator, $varidator_text);
+            // } catch (\Illuminate\Validation\ValidationException $e) {
+            //     dd($e->validator->errors());
+            // }
+
+            // バリデーションここまで -----------------------------------
+
+
     // 該当する記事を取得
     $article = Article::find($request->change_id);
 

@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="priceInput">価格（必須：数字0～6桁）</label>
+                        <label for="priceInput">価格（必須：数字0～4桁）</label>
                         <input type="text" class="form-control" id="priceInput" name="price" required>
                     </div>
 
@@ -37,8 +37,9 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="itemImgInput">画像(未選択の場合は、デフォルトの画像が表示されます)</label>
-                        <input type="file" class="form-control" id="itemImgInput" name="item_img">
+                        <label for="itemImgInput">画像(未選択の場合は、デフォルトの画像が表示されます)<br>
+                        ※展示用に、一時的に画像アップロード不可にしています</label>
+                        <input type="file" class="form-control" id="itemImgInput" name="item_img" disabled>
                     </div>
 
                     <button type="submit" class="btn" name="add" value="add">新規追加</button>
