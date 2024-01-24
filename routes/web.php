@@ -70,6 +70,6 @@ require __DIR__ . '/auth.php';
 
 
 // ログイン必要なページのルーティング
-Route::middleware(['auth'])->group(function () {
-    Route::get('/admin-top', [BlogController::class, 'indexAdminTop']); //利用者の一覧表示。コントローラーのindexメソッド呼び出し・実行
-}); 
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('/admin-top', [BlogController::class, 'indexAdminTop']); //利用者の一覧表示。コントローラーのindexメソッド呼び出し・実行
+// }); 
