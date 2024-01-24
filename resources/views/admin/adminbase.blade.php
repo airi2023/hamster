@@ -88,12 +88,12 @@
 
 
     <div class="contents">
-        <div class="container">
+        {{-- <div class="container">
             <div class="login-text">
                 <p>ログイン中：{{ Auth::user()->name }}さん</p>
                 <a href="/login">ログイン画面へ</a>
             </div>
-        </div>
+        </div> --}}
 
         <!-- 子bladeを挿入する部分 -->
         @yield('contents')
