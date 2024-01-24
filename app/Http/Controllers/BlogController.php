@@ -8,6 +8,7 @@ use App\Models\Article;
 
 class BlogController extends Controller
 {
+    // ブランチにコミットするテスト
     // 利用者サイト表示用----------------------------------------------------------
     // 新着ページ用　一覧表示
     public function newsIndex()
