@@ -15,7 +15,8 @@
 
                             <h4 class="card-title">{{ $article->title }}</h4>
                             <div class="news-imgwrap">
-                                <img src="storage/{{ $article->item_img }}">
+                                {{-- <img src="storage/{{ $article->item_img }}"> --}}
+                                <img src="{{ asset('test/public/' . $article->item_img) }}">
                                 {{-- <img src="{{ asset("storage/$article->item_img") }}" width='200px'> --}}
                                 <h5>{{ $article->price . '円（税込）' }}</h5>
                             </div>

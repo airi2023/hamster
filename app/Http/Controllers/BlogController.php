@@ -96,7 +96,8 @@ class BlogController extends Controller
             $file_name = $request->file('item_img')->getClientOriginalName();
 
             // 取得したファイル名のまま、storage/app/publicディレクトリに画像保存
-            $request->file('item_img')->storeAs('public/', $file_name);
+            // $request->file('item_img')->storeAs('public/', $file_name);
+            $request->file('item_img')->storeAs('public/images', $file_name);
         } else {
             // ファイルがアップロードされていない場合はデフォルトの画像を設定
             $file_name = 'slide1.jpg';

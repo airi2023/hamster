@@ -36,12 +36,20 @@ return [
             'throw' => false,
         ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('app/public'),
+        //     'url' => env('APP_URL').'/storage',
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        // ],
+        
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            // 'root' => storage_path('app/public'),
+            'root' => public_path('test/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
-            'throw' => false,
         ],
 
         's3' => [
