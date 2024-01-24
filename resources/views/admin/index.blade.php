@@ -17,7 +17,7 @@
                             <div class="news-imgwrap">
                                 <img src="storage/{{ $article->item_img }}">
                                 {{-- <img src="{{ asset("storage/$article->item_img") }}" width='200px'> --}}
-                                <h5>{{ $article->price . "円（税込）" }}</h5>
+                                <h5>{{ $article->price . '円（税込）' }}</h5>
                             </div>
                             {{-- <p class="card-text">{{$article->body}}</p> --}}
                             <p class="card-text">{!! nl2br(e($article->body)) !!}</p>
