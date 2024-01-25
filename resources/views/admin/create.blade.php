@@ -38,9 +38,9 @@
 
                     <div class="form-group mb-3">
                         <label for="itemImgInput">画像(未選択の場合は、デフォルトの画像が表示されます)<br>
-                        ※展示用に、一時的に画像アップロード不可にしています</label>
-                        {{-- <input type="file" class="form-control" id="itemImgInput" name="item_img" disabled> --}}
-                        <input type="file" class="form-control" id="itemImgInput" name="item_img">
+                        ※展示用に、一時的に<span style="color:red;">画像アップロード不可</span>にしています</label>
+                        <input type="file" class="form-control" id="itemImgInput" name="item_img" disabled>
+                        {{-- <input type="file" class="form-control" id="itemImgInput" name="item_img"> --}}
                     </div>
 
                     <button type="submit" class="btn" name="add" value="add">新規追加</button>
