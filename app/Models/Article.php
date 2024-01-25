@@ -9,4 +9,5 @@ class Article extends Model
 {
     use HasFactory;
     protected $fillable = ['title', 'price', 'body', 'item_img'];
+    // public $timestamps = false;//タイムスタンプ不使用
 }
