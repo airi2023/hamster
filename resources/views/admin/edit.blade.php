@@ -47,7 +47,7 @@
                     <div class="form-group mb-5">
                         <label for="itemImgBefore">変更前の画像</label><br>
                         {{-- <img src="storage/{{ $article->item_img }}" width="200px" id="itemImgBefore"> --}}
-                        <img src="{{ asset('test/public/' . $article->item_img) }}" width="200px" id="itemImgBefore">
+                        <img src="{{ asset('images/' . $article->item_img) }}" width="200px" id="itemImgBefore">
                     </div>
 
                     <button type="submit" class="btn" name="save" value="save">編集保存</button>

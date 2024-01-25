@@ -32,7 +32,7 @@
                     <div class="form-group mb-5">
                         <label for="itemImgBefore">画像</label><br>
                         {{-- <img src="storage/{{ $article->item_img }}" width="200px" id="itemImgBefore" readonly> --}}
-                        <img src="{{ asset('test/public/' . $article->item_img) }}" width='200px' id="itemImgBefore" readonly>
+                        <img src="{{ asset('images/' . $article->item_img) }}" width='200px' id="itemImgBefore" readonly>
                     </div>
 
                     <button type="submit" class="btn" name="add" value="add">削除</button>

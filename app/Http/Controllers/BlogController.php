@@ -97,7 +97,11 @@ class BlogController extends Controller
 
             // 取得したファイル名のまま、storage/app/publicディレクトリに画像保存
             // $request->file('item_img')->storeAs('public/', $file_name);
-            $request->file('item_img')->storeAs('public/images', $file_name);
+
+            // 取得したファイル名のまま、公開public/imagesに画像保存
+            // 保存先のディレクトリ、保存するファイルの名前、ディスク(ここ書かないとstorageに保存されてしまう)
+            // もし第一引数をimagesではなく「/」にすると、公開public(の直下)に保存される。(「/」=公開publicと、configのfilesystems.phpで指定している為)
+            $request->file('item_img')->storeAs('images', $file_name, 'public'); 
         } else {
             // ファイルがアップロードされていない場合はデフォルトの画像を設定
             $file_name = 'slide1.jpg';
@@ -116,56 +120,56 @@ class BlogController extends Controller
     }
 
 
-// 変更保存処理
-public function change(Request $request)
-{
-            // バリデーション---------------------------------------------
-            $validator = [
-                'title' => 'required|string|max:20',
-                'price' => 'required|numeric|min:0|max:9999',
-                'body' => 'required|string|max:100',
-                'item_img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            ];
-    
-            // エラーの時、任意のテキストを表示
-            $varidator_text = [
-                'title.required' => 'タイトルは必須項目です。',
-                'title.max' => 'タイトルは20文字以内で入力してください。',
-                'price.required' => '価格は必須項目です。',
-                'price.numeric' => '価格には数値を半角で入力してください。',
-                'price.min' => '価格は0～4字で入力してください。',
-                'price.max' => '価格は0～4字で入力してください。',
-                'body.required' => '本文は必須項目です。',
-                'body.max' => '本文は100文字以内で入力してください。',
-                'item_img.image' => 'アップロードできるのは画像ファイルのみです。',
-                'item_img.mimes' => 'サポートされていない画像形式です。jpeg, png, jpg, gif のいずれかをアップロードしてください。',
-                'item_img.max' => 'ファイルサイズは2048KB以内にしてください。',
-            ];
-            $this->validate($request, $validator, $varidator_text);
+    // 変更保存処理
+    public function change(Request $request)
+    {
+        // バリデーション---------------------------------------------
+        $validator = [
+            'title' => 'required|string|max:20',
+            'price' => 'required|numeric|min:0|max:9999',
+            'body' => 'required|string|max:100',
+            'item_img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ];
 
-            // try {
-            //     $this->validate($request, $validator, $varidator_text);
-            // } catch (\Illuminate\Validation\ValidationException $e) {
-            //     dd($e->validator->errors());
-            // }
+        // エラーの時、任意のテキストを表示
+        $varidator_text = [
+            'title.required' => 'タイトルは必須項目です。',
+            'title.max' => 'タイトルは20文字以内で入力してください。',
+            'price.required' => '価格は必須項目です。',
+            'price.numeric' => '価格には数値を半角で入力してください。',
+            'price.min' => '価格は0～4字で入力してください。',
+            'price.max' => '価格は0～4字で入力してください。',
+            'body.required' => '本文は必須項目です。',
+            'body.max' => '本文は100文字以内で入力してください。',
+            'item_img.image' => 'アップロードできるのは画像ファイルのみです。',
+            'item_img.mimes' => 'サポートされていない画像形式です。jpeg, png, jpg, gif のいずれかをアップロードしてください。',
+            'item_img.max' => 'ファイルサイズは2048KB以内にしてください。',
+        ];
+        $this->validate($request, $validator, $varidator_text);
 
-            // バリデーションここまで -----------------------------------
+        // try {
+        //     $this->validate($request, $validator, $varidator_text);
+        // } catch (\Illuminate\Validation\ValidationException $e) {
+        //     dd($e->validator->errors());
+        // }
+
+        // バリデーションここまで -----------------------------------
 
 
-    // 該当する記事を取得
-    $article = Article::find($request->change_id);
+        // 該当する記事を取得
+        $article = Article::find($request->change_id);
 
-    // 記事の各フィールドに新しい値を代入
-    $article->title = $request->title;
-    $article->price = $request->price;
-    $article->body = $request->body;
-    // $article->item_img = $request->item_img;
+        // 記事の各フィールドに新しい値を代入
+        $article->title = $request->title;
+        $article->price = $request->price;
+        $article->body = $request->body;
+        // $article->item_img = $request->item_img;
 
-    // 記事を保存
-    $article->save();
+        // 記事を保存
+        $article->save();
 
-    return redirect('/admin-news');
-}
+        return redirect('/admin-news');
+    }
 
     //削除処理
     public function del_data(Request $request)

@@ -44,11 +44,17 @@ return [
         //     'throw' => false,
         // ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     // 'root' => storage_path('app/public'),
+        //     'root' => public_path('test/public'),
+        //     'url' => env('APP_URL').'/storage',
+        //     'visibility' => 'public',
+        // ],
         'public' => [
             'driver' => 'local',
-            // 'root' => storage_path('app/public'),
-            'root' => public_path('test/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path('/'), // 画像保存先。「/」＝公開「public」＝ルートディレクトリ
+            'url' => env('APP_URL') . '/public', // 保存した画像にアクセスするためのURL。もしURLが http://example.comなら、保存したファイルにアクセスするURLは http://example.com/public
             'visibility' => 'public',
         ],
 
