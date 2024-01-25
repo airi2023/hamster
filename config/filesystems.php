@@ -44,13 +44,6 @@ return [
         //     'throw' => false,
         // ],
 
-        // 'public' => [
-        //     'driver' => 'local',
-        //     // 'root' => storage_path('app/public'),
-        //     'root' => public_path('test/public'),
-        //     'url' => env('APP_URL').'/storage',
-        //     'visibility' => 'public',
-        // ],
         'public' => [
             'driver' => 'local',
             'root' => public_path('/'), // 画像保存先。「/」＝公開「public」＝ルートディレクトリ
