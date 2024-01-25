@@ -58,9 +58,12 @@
                         <a class="nav-link" href="/admin-top">管理者用Top</a>
                     </li>
 
-
                     <li class="nav-item">
                         <a class="nav-link" href="/admin-news">新着情報管理</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">ホームページTop</a>
                     </li>
 
                     {{-- <li class="nav-item">
